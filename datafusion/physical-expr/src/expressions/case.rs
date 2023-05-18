@@ -223,7 +223,7 @@ impl CaseExpr {
             // null values for the current when expr should be kept
             remainder = and(
                 &remainder,
-                &or_kleene(&not(&when_value)?, &is_null(&when_value)?)?,
+                &not(&when_value)?,
             )?;
         }
 
